@@ -1,0 +1,137 @@
+<html>
+
+<head>
+    <title>DisChoices</title>
+	<link href="mainStyle.css" rel="stylesheet"/>
+    <link href="introStyle.css" rel="stylesheet"/>
+	<link href="gameStyle.css" rel="stylesheet"/>
+	<link href="endStyle.css" rel="stylesheet"/>
+
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+    <meta charset="UTF-8">
+
+</head>
+
+<body>
+
+	<div id="introHTML">
+		<img class="backgroundImage" src="icones/government.png"/>
+		<img class="backgroundImage" src="icones/end.png" style="right: 0;"/>
+		<div class="containerMenu">
+			<h1 class="gameTitle">DisChoices</h1>
+			<button class="menuButton" id="introButton">Introducció</button>
+			<button class="menuButton" id="startButton">Nova partida</button>
+			<button class="menuButtonFullScreen" id="fullScreenButton">Pantalla Completa</button>
+		</div>
+		<div class="containerIntro" id="intro1">
+			<p class="introText" id="introText1"></p>
+			<img class="introImg" src="icones/government.png" id="introImage1">
+			<button class="introButton" id="initButton" style="float:left">Inici</button>
+			<button class="introButton" id="nextButton1">Seguent</button>
+		</div>
+		<div class="containerIntro"  id="intro2">
+			<p class="introText" id="introText2"></p>
+			<img class="introImg" src="icones/hospital1.png" id="introImage2">
+			<button class="introButton" id="previousButton2" style="float:left">Anterior</button>
+			<button class="introButton" id="nextButton2">Seguent</button>
+		</div>
+		<div class="containerIntro"  id="intro3">
+			<p class="introText" id="introText3"></p>
+			<img class="introImg" src="characters/doctor.png" id="introImage3">
+			<button class="introButton" id="previousButton3" style="float:left">Anterior</button>
+			<button class="introButton" id="nextButton3">Seguent</button>
+		</div>
+		<div class="containerIntro"  id="intro4">
+			<p class="introText" id="introText4"></p>
+			<img class="introImg" src="characters/farmer.png" id="introImage4">
+			<button class="introButton" id="previousButton4" style="float:left">Anterior</button>
+			<button class="introButton" id="nextButton4">Seguent</button>
+		</div>
+		<div class="containerIntro"  id="intro5">
+			<p class="introText" id="introText5"></p>
+			<img class="introImg" src="characters/singer.png" id="introImage5">
+			<button class="introButton" id="previousButton5" style="float:left">Anterior</button>
+			<button class="introButton" id="nextButton5">Seguent</button>
+		</div>
+		<div class="containerIntro"  id="intro6">
+			<p class="introText" id="introText6"></p>
+			<img class="introImg" src="characters/teacher.png" id="introImage6">
+			<button class="introButton" id="previousButton6" style="float:left">Anterior</button>
+			<button class="introButton" id="nextButton6">Seguent</button>
+		</div>
+		<div class="containerIntro"  id="intro7">
+			<p class="introText" id="introText7"></p>
+			<img class="introImg" src="icones/government.png" id="introImage7">
+			<button class="introButton" id="previousButton7" style="float:left">Anterior</button>
+			<button class="introButton" id="nextButton7">Seguent</button>
+		</div>
+	</div >
+	
+	<div id="gameHTML">
+	    <div class="container">
+			<div class="government">
+			   <!-- <img class="card" src="card.png"/>
+				-->
+				<div class="date"></div>
+				<div class="globalStatistics"></div>
+				<div id="canvasContainer">
+					<canvas id="framebuffer"> </canvas>
+				</div>
+				   
+			</div>
+			<div class="characters">
+				<div class="character">
+					<div class="statistics">Salut: 100% Diners: 100% Felicitat: 100%</div>
+					<div class="character-illImage" style="background-image: url(characters/doctor2.png)" >
+						<img src="characters/doctor.png" class="character-normalImage"/>
+					</div>
+				</div>
+				<div class="character">
+					<div class="statistics">Salut: 100% Diners: 100% Felicitat: 100%</div>
+					<div class="character-illImage" style="background-image: url(characters/singer2.png)" >
+						<img src="characters/singer.png" class="character-normalImage"/>
+					</div>
+				</div>
+				<div class="character">
+					<div class="statistics">Salut: 100% Diners: 100% Felicitat: 100%</div>
+					<div class="character-illImage" style="background-image: url(characters/teacher2.png)" >
+						<img src="characters/teacher.png" class="character-normalImage"/>
+					</div>
+				</div>
+				<div class="character">
+					<div class="statistics">Salut: 100% Diners: 100% Felicitat: 100%</div>
+					<div class="character-illImage" style="background-image: url(characters/farmer2.png)" >
+						<img src="characters/farmer.png" class="character-normalImage"/>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	
+	</div>
+	<div id="endingHTML">
+		<div class="containerEnd" id="end">
+			<h1 class="endTextMonth" id="endTextMonth1"></h1>
+			<p class="endText" id="endText1"></p>
+			<img class="endImg" src="icones/end.png" id="endImage">
+			<button class="endButton" id="endToMenuButton" style="float:left">Menú Inicial</button>
+			<button class="endButton" id="endTNewGameButton">Reintentar</button>
+		</div>
+	</div>
+
+
+	<script src="utils.js" type="text/javascript"></script>
+
+	<script src="world/worldJSONFile.js" type="text/javascript"></script>
+	<script src ="world.js" type="text/javascript"></script>
+	<script src ="statistics.js" type="text/javascript"></script>
+	<script src ="renderCard.js" type="text/javascript"></script>
+	<script src ="gameScript.js" type="text/javascript"></script>
+
+	<script src="introScript.js"></script>
+	<script src="endScript.js"></script>
+
+	<script src="main.js" type="text/javascript"></script>
+</body>
+
+</html>
